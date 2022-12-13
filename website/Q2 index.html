@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<title>Group 2 Q2</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 15%, 10%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body style="background-color:gray;">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="file:///C:/Users/isuel/OneDrive/Desktop/index.html">Home</a>
+  <a href="file:///C:/Users/isuel/OneDrive/Desktop/Q1%20index.html">Q1</a>
+  <a href="file:///C:/Users/isuel/OneDrive/Desktop/Q2%20index.html">Q2</a>
+  <a href="#">Q3</a>
+  <a href="#">Q4</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+</script>
+<hr>
+
+<h1 style="font-size:300%;"style="font-family:'Courier New', Courier, monospace;"><center>Group 2 Website_Q2</center></h1>
+
+<center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0" />
+	<style>
+		
+	/* Setting container to flex and
+		width to 80% of view port */
+	.container {
+		display: flex;
+		width: 80%;
+	}
+	/*Adding background image to each section*/
+	.one {
+		background: url(
+      http://drive.google.com/uc?export=view&id=1Ud3XZfX2mjdniC_JMRJSRbYPaFI35aRd);
+	}
+	.two {
+		background: url(
+      http://drive.google.com/uc?export=view&id=1UkxgNFntvP_8WTbpMwj5cxH7vk3vYCGB);
+	}
+	.three {
+		background: url(
+      http://drive.google.com/uc?export=view&id=1nBQ7cthz367axoEgj5nIgMTgf92ZYOul);
+	}
+
+		
+	/* Background properties and
+		transition effect to section */
+	.section {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 80vh;
+		cursor: pointer;
+		flex: 0.2;
+		margin: 8px;
+		position: relative;
+		transition: all 0.7s ease-out;
+	}
+
+	/* section with active class will
+		grow flex to 3 times */
+	.section.active {
+		flex: 3;
+	}
+	</style>
+	<title>Expanding Cards</title>
+</head>
+<body>
+	
+	<!-- Container -->
+	<div class="container">
+		
+	<!-- Div with section and active -->
+	<div class="section one active"></div>
+		
+	<!-- All another div with section -->
+	<div class="section two"></div>
+	<div class="section three"></div>
+	<div class="section four"></div>
+	</div>
+
+	<script>
+		
+	// selecting all sections with class of section
+	const sections = document.querySelectorAll(".section");
+
+	// Foreach section when clicked
+	sections.forEach((section) => {
+		section.addEventListener("click", () => {
+			
+		// remove active class from all another section and
+		// add it to the selected section
+		sections.forEach((section) => {
+			section.classList.remove("active");
+		});
+		section.classList.add("active");
+		});
+	});
+	</script>
+  </center>
+</body>
+</html>
+
+
+<hr>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #030202eb;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2 style="font-size:200%;"style="font-family:'Courier New', Courier, monospace;">Advertising Plan</h2>
+
+<button type="button" class="collapsible">Brand Name</button>
+<div class="content">
+  <p style="font-size:100%;"style="font-family:'Courier New', Courier, monospace;"> Our group's Brand name/Youtube Channel Name, is <b>Anzen</b>. We decided this name by just thinking of a word that is simple and easy to remember and not too complicated to understand. So we brainstorm and recall the scenario  during quarter 1. Our scenario is to help Sitio Bebe with their health issues because they don’t have enough health professionals. So we decided <b>Anzen</b> because if we translate Safe/Secure in English to Japanese word the word will be <b>Anzen</b>. </p>
+</div>
+<button type="button" class="collapsible">Logo</button>
+<div class="content">
+  <p> Our group plans to keep it simple and at the same time show what we do and to make our target audiences remember us by seeing just our simple logo. We also included our brand name, slogan in our logo. So just in case one of our target audience forgot how our logo looks he/she can read our brand name to identify and remember us.
+  </p>
+</div>
+<button type="button" class="collapsible">Slogan/Tagline</button>
+<div class="content">
+  <p style="font-size:100%;"style="font-family:'Courier New', Courier, monospace;">Our group's tagline/slogan is <b>Great Helps. Great Times.</b> Our group just researched for some examples, and we took inspiration from one of the taglines we’ve seen. Also this tagline gives an idea for the things we will do, for example great help it shows that we will help, and by helping each other we can have great times.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+<h3 style="font-size:200%;"style="font-family:'Courier New', Courier, monospace;">Brand Identity:</h3>
+<h4 style="font-size:150%;"style="font-family:'Courier New', Courier, monospace;">Brand Name/Youtube Channel Name</h4>
+<p style="font-size:100%;"style="font-family:'Courier New', Courier, monospace;"><u>Anzen</u></p>
+
+<h5 style="font-size:200%;"style="font-family:'Courier New', Courier, monospace;">Logo:</h5>
+
+<img src="http://drive.google.com/uc?export=view&id=1LZksPmw4Eov-cFE57LXZM6GNeS-57w9_" style="width:500px;height:400px;">
+
+<h6 style="font-size:150%;"style="font-family:'Courier New', Courier, monospace;">Tagline/Slogan</h6>
+<p style="font-size:100%;"style="font-family:'Courier New', Courier, monospace;"><u>Great Help. Great Times</u></p>
+
+<h7 style="font-size:150%;"style="font-family:'Courier New', Courier, monospace;"><p>Video Intro</p></h7>
+
+
+
+</body>
+</html>
+
+
